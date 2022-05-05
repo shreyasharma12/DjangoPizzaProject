@@ -3,9 +3,9 @@
 
 {% block content %}
 
-<p>Add a new comment:</p>
-
 <p><a href="{% url 'pizzas:pizza' pizza.id %}">{{ pizza }}</a></p>
+
+<p>Add a new comment:</p>
 
 <form action=" {% url 'pizzas:new_pizza_comment' pizza.id %}" method='post'>
 

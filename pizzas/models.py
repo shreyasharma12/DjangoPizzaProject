@@ -24,5 +24,5 @@ class Comment(models.Model):
     date_added = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
-        return f"{self.topping_name[:50]}"
+        return f"{self.comment_name[:50]}"
 

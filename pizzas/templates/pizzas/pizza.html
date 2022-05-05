@@ -17,7 +17,7 @@
     {% endfor %}
 </ul>
 
-
+<p><a href="{% url 'pizzas:new_pizza_comment' pizza.id %}">Add new comment</a></p>
 
 <ul>
     {% for c in comments %}
@@ -29,7 +29,5 @@
     <li> There are no comments for this Pizza yet.</li>
     {% endfor %}
 </ul>
-
-<p><a href="{% url 'pizzas:new_pizza_comment' pizza.id %}">Add new comment</a></p>
 
 {% endblock content %}
