@@ -24,7 +24,7 @@
 <a href="{% url 'pizzas:new_pizza_comment' pizza.id %}">Add a new comment:</a>
 
 <ul>
-    {% for c in commentss %}
+    {% for c in comments %}
     <div class="card mb-3">
         <h4 class="card-header">
             {{ c.comment_name }}
