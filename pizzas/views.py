@@ -13,7 +13,6 @@ def pizzas(request):
     pizzas = Pizza.objects.all()
 
     context = {'pizzas':pizzas}
-
     return render(request,'pizzas/pizzas.html',context)
 
 def pizza(request, pizza_id):

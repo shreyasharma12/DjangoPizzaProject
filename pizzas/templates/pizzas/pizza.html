@@ -1,4 +1,5 @@
 {% extends "pizzas/base.html" %}
+{% load static %}
 
 {% block page_header %}
 <h3>{{ pizza }}</h3>
@@ -9,16 +10,16 @@
 <ul>
     {% for t in toppings %}
     <div class="card mb-3">
-        <h4 class="card-header">
-            {{ t.topping_name }}
-        </h4>
         <div class="card-body">
-            {{ entry.text|linebreaks }}
+            <p>{{ t.topping_name|linebreaks }}</p>
         </div>
     </div>
     {% empty %}
     <li> There are no toppings for this Pizza yet.</li>
     {% endfor %}
+
+    <img src="{% static 'pizzas/images/meatymax.jpg' %}" >
+
 </ul>
 
 <a href="{% url 'pizzas:new_pizza_comment' pizza.id %}">Add a new comment:</a>
@@ -26,11 +27,8 @@
 <ul>
     {% for c in comments %}
     <div class="card mb-3">
-        <h4 class="card-header">
-            {{ c.comment_name }}
-        </h4>
         <div class="card-body">
-            {{ entry.text|linebreaks }}
+            <p>{{ c.comment_name|linebreaks }}</p>
         </div>
     </div>
     {% empty %}
