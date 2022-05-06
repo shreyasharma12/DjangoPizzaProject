@@ -14,11 +14,18 @@
             <p>{{ t.topping_name|linebreaks }}</p>
         </div>
     </div>
+
+    <style>
+        body {
+            background-image: url("https://cdn.wallpapersafari.com/62/25/oSPKdi.jpg");
+        }
+    </style>
+
     {% empty %}
     <li> There are no toppings for this Pizza yet.</li>
     {% endfor %}
 
-    <img src="{% static 'pizzas/images/meatymax.jpg' %}" >
+    <img src="{% static 'pizzas/images/bbqchicken.jpg' %}">
 
 </ul>
 
@@ -31,6 +38,13 @@
             <p>{{ c.comment_name|linebreaks }}</p>
         </div>
     </div>
+
+    <style>
+        body {
+            background-image: url("https://cdn.wallpapersafari.com/62/25/oSPKdi.jpg");
+        }
+    </style>
+
     {% empty %}
     <li> There are no comments for this Pizza yet.</li>
     {% endfor %}
